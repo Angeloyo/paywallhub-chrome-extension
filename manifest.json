@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "PaywallHub",
+    "version": "1.0.0",
+    "description": "All your paywall removers, united",
+    "permissions": [
+        "tabs"
+    ],
+    "icons": {
+        "16": "./img/icon.png",
+        "48": "./img/icon.png",
+        "128": "./img/icon.png"
+    },
+    "action": {
+        "default_icon": {
+            "16": "./img/icon.png",
+            "24": "./img/icon.png",
+            "32": "./img/icon.png"
+        },
+        "default_title": "PaywallHub",
+        "default_popup": "popup.html"
+    }
+    
+}
