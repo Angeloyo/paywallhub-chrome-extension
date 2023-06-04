@@ -10,6 +10,7 @@ body {
   flex-direction: column;
 }
 
+/* mit license: https://uiverse.io/barisdogansutcu/black-duck-67 */
 button {
   display: flex;
   align-items: center;
@@ -42,3 +43,4 @@ button {
  button:active {
   box-shadow: none;
  }
+ /* end mit license */
