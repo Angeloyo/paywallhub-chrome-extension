@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
           let urlActual = tabs[0].url;
           let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://archive.is/newest/' + urlLimpia;
+          let urlDestino = 'https://archive.ph/newest/' + urlLimpia;
           chrome.tabs.create({ url: urlDestino });
       });
   });
