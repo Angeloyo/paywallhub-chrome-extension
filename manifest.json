@@ -1,7 +1,7 @@
 {
     "manifest_version": 3,
     "name": "PaywallHub",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "All your favourite paywall removers, united",
     "permissions": [
         "tabs"

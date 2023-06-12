@@ -1,3 +1,29 @@
+let msg = document.getElementById("id-msg");
+
+window.addEventListener('load', loadmsg);
+function loadmsg() {
+    const now = Date.now();
+    fetch(`https://paywallhub.com/msg/msg1.txt?${now}`)
+      .then((response) => {
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error("Failed to obtain message");
+        }
+      })
+      .then((data) => {
+        msg.textContent = data.message;
+        const style = data.style;
+        Object.keys(style).forEach((property) => {
+          msg.style[property] = style[property];
+        });
+      })
+      .catch((error) => {
+        console.error("Failed to obtain message:", error);
+      }
+    );
+}
+
 
 function limpiarUrl(url) {
   let urlObj = new URL(url);
