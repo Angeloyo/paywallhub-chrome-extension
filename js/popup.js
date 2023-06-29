@@ -59,12 +59,13 @@ document.addEventListener('DOMContentLoaded', function() {
       });
   });
 
-//   document.getElementById('boton-removepaywall').addEventListener('click', function() {
-//     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-//         let urlActual = tabs[0].url;
-//         let urlLimpia = limpiarUrl(urlActual);
-//         let urlDestino = 'https://removepaywall.com/' + urlLimpia;
-//         chrome.tabs.create({ url: urlDestino });
-//     });
-// });
+  document.getElementById('boton-gcache').addEventListener('click', function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        let urlActual = tabs[0].url;
+        let urlLimpia = limpiarUrl(urlActual);
+        let urlDestino = 'https://webcache.googleusercontent.com/search?q=cache:' + urlLimpia;
+        chrome.tabs.create({ url: urlDestino });
+    });
+  });
+  
 });
