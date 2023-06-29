@@ -4,7 +4,7 @@
     "version": "1.0.3",
     "description": "All your favourite paywall removers, united",
     "permissions": [
-        "tabs", "contextMenus"
+        "tabs"
     ],
     "icons": {
         "16": "./img/icon.png",
