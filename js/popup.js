@@ -1,5 +1,8 @@
-let msg = document.getElementById("id-msg");
 
+let msg = document.getElementById("id-msg");
+let msgforbid = document.getElementById("id-msg-forbid");
+
+// load remote message
 window.addEventListener('load', loadmsg);
 function loadmsg() {
     const now = Date.now();
@@ -24,48 +27,74 @@ function loadmsg() {
     );
 }
 
-
-function limpiarUrl(url) {
+function cleanURL(url) {
   let urlObj = new URL(url);
   return urlObj.origin + urlObj.pathname;
 }
 
+function checkDomain(url, bannedDomain) {
+  let urlObj = new URL(url);
+  return urlObj.hostname !== bannedDomain;
+}
+
+function showForbiddenMsg() {
+  let mensaje = document.getElementById('id-msg-forbid');
+  mensaje.style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', function() {
-  // Botón 12ft
+
+  const bannedDomain = 'www.washingtonpost.com';
+
   document.getElementById('boton-12ft').addEventListener('click', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          let urlActual = tabs[0].url;
-          let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://12ft.io/' + urlLimpia;
-          chrome.tabs.create({ url: urlDestino });
+          let thisUrl = tabs[0].url;
+          if (checkDomain(thisUrl, bannedDomain)) {
+              let cleanedUrl = cleanURL(thisUrl);
+              let targetUrl = 'https://12ft.io/' + cleanedUrl;
+              chrome.tabs.create({ url: targetUrl });
+          } else {
+              showForbiddenMsg();
+          }
       });
   });
 
   document.getElementById('boton-internetarchive').addEventListener('click', function() {
-      chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          let urlActual = tabs[0].url;
-          let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://web.archive.org/' + urlLimpia;
-          chrome.tabs.create({ url: urlDestino });
-      });
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        let thisUrl = tabs[0].url;
+        if (checkDomain(thisUrl, bannedDomain)) {
+            let cleanedUrl = cleanURL(thisUrl);
+            let targetUrl = 'https://web.archive.org/' + cleanedUrl;
+            chrome.tabs.create({ url: targetUrl });
+        } else {
+          showForbiddenMsg();
+        }
+    });
   });
 
   document.getElementById('boton-archiveis').addEventListener('click', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          let urlActual = tabs[0].url;
-          let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://archive.ph/newest/' + urlLimpia;
-          chrome.tabs.create({ url: urlDestino });
+          let thisUrl = tabs[0].url;
+          if (checkDomain(thisUrl, bannedDomain)) {
+              let cleanedUrl = cleanURL(thisUrl);
+              let targetUrl = 'https://archive.ph/newest/' + cleanedUrl;
+              chrome.tabs.create({ url: targetUrl });
+          } else {
+            showForbiddenMsg();
+          }
       });
   });
 
   document.getElementById('boton-gcache').addEventListener('click', function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        let urlActual = tabs[0].url;
-        let urlLimpia = limpiarUrl(urlActual);
-        let urlDestino = 'https://webcache.googleusercontent.com/search?q=cache:' + urlLimpia;
-        chrome.tabs.create({ url: urlDestino });
+        let thisUrl = tabs[0].url;
+        if (checkDomain(thisUrl, bannedDomain)) {
+            let cleanedUrl = cleanURL(thisUrl);
+            let targetUrl = 'https://webcache.googleusercontent.com/search?q=cache:' + cleanedUrl;
+            chrome.tabs.create({ url: targetUrl });
+        } else {
+          showForbiddenMsg();
+        }
     });
   });
-  
 });
