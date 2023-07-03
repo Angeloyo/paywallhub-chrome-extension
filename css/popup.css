@@ -9,10 +9,6 @@ body {
   align-items: center;
   flex-direction: column;
 }
-#id-msg-forbid {
-  display: none;
-}
-
 /* mit license: https://uiverse.io/barisdogansutcu/black-duck-67 */
 button {
   display: flex;
