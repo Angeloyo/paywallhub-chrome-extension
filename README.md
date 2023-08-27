@@ -16,6 +16,6 @@ PaywallHub effectively allows you to remove paywalls or bypass the paywall on an
 6. Navigate to the directory where you saved the extracted zip file for the extension. Select the folder and click 'Open'.
 7. The extension should now be manually installed on your Chrome browser.
 
-Remember to check back here for the latest updates, as they won't be automatically installed through the Google Chrome Store anymore."
+Remember to check back here for the latest updates, as they won't be automatically installed through the Google Chrome Store anymore.
 
 ![image-paywallhub](/img/1.png)
