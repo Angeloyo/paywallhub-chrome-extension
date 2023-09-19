@@ -1,5 +1,11 @@
 # PaywallHub Chrome Extension
 
+## Website: https://paywallhub.com
+
+## Website repository: https://github.com/Angeloyo/paywallhub.com
+
+## Firefox addon repository: https://github.com/Angeloyo/paywallhub-firefox-addon
+
 Remove newspaper/magazine paywalls for free and legally!
 
 PaywallHub unites all your favorite paywall removers.
