@@ -12,7 +12,7 @@ PaywallHub unites all your favorite paywall removers.
 
 PaywallHub effectively allows you to remove paywalls or bypass the paywall on an article but in a way that does not interfere with the original page in any way. It simply redirects you to third-party websites that do that. I do not own, run, maintain, or have any association with these sites.
 
-### Unfortunately, Google will no longer be accepting updates for this Chrome extension. However, you can download the latest version from this repository and install it yourself. To do this, follow the steps outlined below:
+# Unfortunately, Google will no longer be accepting updates for this Chrome extension. However, you can download the latest version from this repository and install it yourself. To do this, follow the steps outlined below:
 
 1. Open the Google Chrome browser on your computer.
 2. Download latest .zip release from https://github.com/Angeloyo/paywallhub-chrome-extension/releases/latest
