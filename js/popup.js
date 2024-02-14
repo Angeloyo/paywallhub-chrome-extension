@@ -24,47 +24,55 @@ function loadmsg() {
     );
 }
 
-
-function limpiarUrl(url) {
+function cleanUrl(url) {
   let urlObj = new URL(url);
   return urlObj.origin + urlObj.pathname;
 }
 
 document.addEventListener('DOMContentLoaded', function() {
-  // Botón 12ft
-  document.getElementById('boton-12ft').addEventListener('click', function() {
+
+  document.getElementById('button-12ft').addEventListener('click', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          let urlActual = tabs[0].url;
-          let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://12ft.io/' + urlLimpia;
-          chrome.tabs.create({ url: urlDestino });
+          let currentUrl = tabs[0].url;
+          let cleanedUrl = cleanUrl(currentUrl);
+          let finalUrl = 'https://12ft.io/' + cleanedUrl;
+          chrome.tabs.create({ url: finalUrl });
       });
   });
 
-  document.getElementById('boton-internetarchive').addEventListener('click', function() {
+  document.getElementById('button-internetarchive').addEventListener('click', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          let urlActual = tabs[0].url;
-          let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://web.archive.org/' + urlLimpia;
-          chrome.tabs.create({ url: urlDestino });
+          let currentUrl = tabs[0].url;
+          let cleanedUrl = cleanUrl(currentUrl);
+          let finalUrl = 'https://web.archive.org/' + cleanedUrl;
+          chrome.tabs.create({ url: finalUrl });
       });
   });
 
-  document.getElementById('boton-archiveis').addEventListener('click', function() {
+  document.getElementById('button-archiveis').addEventListener('click', function() {
       chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-          let urlActual = tabs[0].url;
-          let urlLimpia = limpiarUrl(urlActual);
-          let urlDestino = 'https://archive.is/newest/' + urlLimpia;
-          chrome.tabs.create({ url: urlDestino });
+          let currentUrl = tabs[0].url;
+          let cleanedUrl = cleanUrl(currentUrl);
+          let finalUrl = 'https://archive.is/newest/' + cleanedUrl;
+          chrome.tabs.create({ url: finalUrl });
       });
   });
 
-  document.getElementById('boton-gcache').addEventListener('click', function() {
+  document.getElementById('button-gcache').addEventListener('click', function() {
     chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
-        let urlActual = tabs[0].url;
-        let urlLimpia = limpiarUrl(urlActual);
-        let urlDestino = 'https://webcache.googleusercontent.com/search?q=cache:' + urlLimpia;
-        chrome.tabs.create({ url: urlDestino });
+        let currentUrl = tabs[0].url;
+        let cleanedUrl = cleanUrl(currentUrl);
+        let finalUrl = 'https://webcache.googleusercontent.com/search?q=cache:' + cleanedUrl;
+        chrome.tabs.create({ url: finalUrl });
+    });
+  });
+
+  document.getElementById('button-removepaywall').addEventListener('click', function() {
+    chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+        let currentUrl = tabs[0].url;
+        let cleanedUrl = cleanUrl(currentUrl);
+        let finalUrl = 'https://removepaywall.com/' + cleanedUrl;
+        chrome.tabs.create({ url: finalUrl });
     });
   });
   

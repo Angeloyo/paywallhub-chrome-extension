@@ -1,8 +1,8 @@
 {
     "manifest_version": 3,
     "name": "PaywallHub",
-    "version": "1.0.4",
-    "description": "All your favourite paywall removers, united",
+    "version": "1.0.5",
+    "description": "Browse archived versions of web pages, having your favorite paywall removers united.",
     "permissions": [
         "tabs"
     ],
