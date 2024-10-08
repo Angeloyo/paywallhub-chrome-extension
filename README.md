@@ -1,18 +1,8 @@
+[Website](https://paywallhub.com) - [Website repo](https://github.com/Angeloyo/PaywallHub) - [Chrome Web Store](https://chrome.google.com/webstore/detail/paywallhub/iimagbhmhkinjaaammedekiocfphhhca) - [Firefox addon](https://addons.mozilla.org/es/firefox/addon/paywallhub/) - [Firefox addon repo](https://github.com/Angeloyo/paywallhub-firefox-addon)
+
 # PaywallHub Chrome Extension
 
-### [Website](https://paywallhub.com)
-
-### [Chrome Web Store](https://chrome.google.com/webstore/detail/paywallhub/iimagbhmhkinjaaammedekiocfphhhca)
-
-### [Firefox addon](https://addons.mozilla.org/es/firefox/addon/paywallhub/)
-
-### [Firefox addon repository](https://github.com/Angeloyo/paywallhub-firefox-addon)
-
-Remove newspaper/magazine paywalls for free and legally!
-
-PaywallHub unites all your favorite paywall removers.
-
-PaywallHub effectively allows you to remove paywalls or bypass the paywall on an article but in a way that does not interfere with the original page in any way. It simply redirects you to third-party websites that do that. I do not own, run, maintain, or have any association with these sites.
+PaywallHub effectively allows you to remove paywalls or bypass the paywall on an article by simply redirecting you to third-party websites that do that.
 
 ## How to install manually
 
