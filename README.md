@@ -1,8 +1,14 @@
-[Website](https://paywallhub.com) - [Website repo](https://github.com/Angeloyo/PaywallHub) - [Chrome Web Store](https://chrome.google.com/webstore/detail/paywallhub/iimagbhmhkinjaaammedekiocfphhhca) - [Firefox addon](https://addons.mozilla.org/es/firefox/addon/paywallhub/) - [Firefox addon repo](https://github.com/Angeloyo/paywallhub-firefox-addon)
+[Website repo](https://github.com/Angeloyo/PaywallHub) - [Firefox addon repo](https://github.com/Angeloyo/paywallhub-firefox-addon)
 
 # PaywallHub Chrome Extension
 
 PaywallHub effectively allows you to remove paywalls or bypass the paywall on an article by simply redirecting you to third-party websites that do that.
+
+## Important Notice
+
+This extension has been removed from the Chrome Web Store :( however, the source code is available in this repository for those who wish to explore or manually install it.
+
+This repository is provided for educational purposes only. The use of this extension is at your own risk, and it is your responsibility to comply with all applicable laws and terms of service.
 
 ## How to install manually
 
